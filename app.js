@@ -57,6 +57,6 @@ app.use(indexRoutes); // name app as router
 app.use("/projects",projectRoutes); // remove redundancy of url /projects
 app.use(express.static(path.join(__dirname, 'public'))); // path for public/stylesheet
 
-app.listen(3000, ()=>{
-    console.log('port 3000')
-})
+app.listen( process.env.PORT || 3000 , process.env.IP, function() {
+      console.log("Portfolio started");
+});
