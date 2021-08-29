@@ -12,11 +12,23 @@ const methodOverride = require("method-override");
 const projectRoutes = require("./routes/projects")
 const indexRoutes = require("./routes/index")
 
-//connect mongoose
-mongoose.connect('mongodb://localhost:27017/portfolio',{
+// //connect mongoose
+// mongoose.connect('mongodb://localhost:27017/portfolio',{
+//     useNewUrlParser: true,
+//     useUnifiedTopology: true
+// });
+
+mongoose.connect('mongodb+srv://finn1729:Jake4529^^@cluster0.lribb.mongodb.net/Portfolio',{
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 });
+
+// mongoose.connect('mongodb+srv://finn1729:Jake4529^^@whoever.mlazf.mongodb.net/<dbname>?retryWrites=true&w=majority', {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+//   useCreateIndex:true
+// })
+
 
 const app = express();
 app.set('view engine', 'ejs');
