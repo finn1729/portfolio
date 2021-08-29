@@ -1,0 +1,50 @@
+<%- include("partials/header") %>
+
+<div id="body_frame" class="container">
+	<div id="body_row" class="container face_in_effect">
+		<div id="body_desc">
+			<h1 style="color:#505050; margin-bottom:20%">Hello World!</h1>
+			<h2 style="color:#ffffff">
+				I'm Junweon Suh,<br>
+				Computer Programmer, 
+				<i class="far fa-keyboard"></i><br>
+				Explorer. 
+				<i class="far fa-map"></i>
+			</h2>
+		</div>
+		<img id="hxg" src="/image/hxg.png">
+	</div>
+	
+	<div id="down_arrow">
+	<p style="color:#555555; font-size:50px"><i class="fas fa-chevron-down"></i></p>
+	</div>
+	 
+	<div id="body_container" class="container">
+		<div class="row text-center" style="display:flex; flex-wrap:wrap;">
+			<% portfolios.forEach(function(portfolio){ %>
+			<div id="forEach" class="col-md-12">
+				<div id="project_div" class="thumbnail fade_in_effect">
+					<h4 class="font_one">
+					<%= portfolio.title %>
+					</h4>
+					<img src="<%=portfolio.image%>" />
+					<p></p>
+					<P>
+						<a id="seemorebtn" href="/projects/<%= portfolio._id%>" class=" button_more" role="button" data-bs-toggle="button">See More</a>
+					</P>
+				</div>
+				
+			</div>
+			
+			<% }) %>
+		</div>	
+		<% if(currentUser){ %>
+		<p align=center>
+			<a style="margin-bottom:20px" class ="btn btn-warning btn-large  " href="/projects/new">Add new project</a>	
+		</p>
+		<% } %>
+	</div>
+	
+
+</div>
+<%- include("partials/footer") %>

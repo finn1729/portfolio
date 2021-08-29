@@ -1,0 +1,25 @@
+<%- include("partials/header") %>
+
+<div style="height:100%; width:100%; display:flex" class="fade_in_effect">
+	<div style="margin:0 auto;">
+		<p style="margin-top:10px" align=center class="font_one"><%= portfolio.title%></p>
+	
+		<iframe width="960vmin" height="540vmin" height="auto"  src="<%=portfolio.iframe%>" frameborder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+		<p class="font_two" style="margin-top:10px; padding-left:7px"><%=portfolio.description%></p>
+
+		<% if(portfolio.link){ %>
+		<p style="padding-left:7px"><a class="button_more" href="<%=portfolio.link%>"><u>View Project</u></a></p>
+		<%}%>
+		
+		<% if(currentUser){ %>
+		<form action="/projects/<%=portfolio._id%>?_method=DELETE" method="POST">
+			<button class="btn btn-danger">
+				delete
+			</button>
+		</form>
+		<% } %>
+	</div>
+</div>
+
+<%- include("partials/footer") %>

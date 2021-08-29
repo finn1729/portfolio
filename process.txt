@@ -1,0 +1,14 @@
+mongod 실행후 nodemon app.js 실행
+
+rest(CRUD) 만들어줌
+partials/footer, header 만들어서 관리해주고
+
+mongoose랑 express랑 엮어준다
+-app.js-
+main_2, main_3 의 app.js 랑 portfolio.js 비교하면됨
+
+로그인기능 package : npm install passport passport-local passport-local-mongoose express-session --save
+
+refactoring
+
+Delete, css
