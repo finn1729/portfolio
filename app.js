@@ -18,6 +18,7 @@ const indexRoutes = require("./routes/index")
 //     useUnifiedTopology: true
 // });
 
+//THIS IS IMPORTANT TO USE MONGODB ATLAS
 mongoose.connect('mongodb+srv://finn1729:Jake4529^^@cluster0.lribb.mongodb.net/Portfolio',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -57,6 +58,6 @@ app.use(indexRoutes); // name app as router
 app.use("/projects",projectRoutes); // remove redundancy of url /projects
 app.use(express.static(path.join(__dirname, 'public'))); // path for public/stylesheet
 
-app.listen( process.env.PORT || 3000 , process.env.IP, function() {
+app.listen( process.env.PORT || 3000 , process.env.IP, function() {  // this is IMPORTANT TO RUN ON HEROKU
       console.log("Portfolio started");
 });

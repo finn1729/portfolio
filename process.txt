@@ -25,5 +25,8 @@ Delete, css
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node app.js"
 	  },
-9. connect.mongoose("atlas connect 주소 사용(CONNECT YOUR APPLICATION 탭)")
+9. connect.mongoose("atlas connect 주소 사용(CONNECT YOUR APPLICATION 탭)") 아틀라스 데이터베이스에 연결
 
+10.app.listen( process.env.PORT || 3000 , process.env.IP, function() { 
+      console.log("Portfolio started");
+});  헤로쿠에 서버 연결하기위해사용
