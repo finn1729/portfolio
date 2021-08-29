@@ -178,7 +178,15 @@ img {
 	border-right:4px solid #b1937b;
 	border-left:4px solid #727272;
 	padding: 0px 30px;
+}
+
+@media (orientation: portrait) or screen (max-height:450px) {
+	#body_frame{
+	border-right:4px solid #b1937b;
+	border-left:4px solid #727272;
+	padding: 0px 30px;
 	height:100%;
+	}
 }
 
 /* @@@@@@@@@@ ABOUT @@@@@@@@@@ */
